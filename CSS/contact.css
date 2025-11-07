@@ -1,0 +1,137 @@
+/* =============== GENERAL (Minimal) =============== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #fff;
+    color: #734933;
+    line-height: 1.5;
+}
+
+/* =============== CONTACT SECTION =============== */
+.contact-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 80px 0;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1100px;
+    width: 100%;
+    gap: 60px;
+    padding: 0 40px;
+}
+
+/* =============== LEFT INFO =============== */
+.contact-info {
+    flex: 1;
+}
+
+.contact-info h2 {
+    color: #ff9944;
+    font-size: 2.3rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    color: #734933;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.contact-list {
+    list-style: none;
+}
+
+.contact-list li {
+    color: #734933;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon {
+    font-size: 1.2rem;
+    color: #ffa757;
+}
+
+/* =============== RIGHT FORM =============== */
+.contact-form {
+    flex: 1;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 2px solid #D19976;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: 0.2s;
+    resize: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #734933;
+    box-shadow: 0 0 4px rgba(255, 153, 68, 0.4);
+}
+
+.contact-form button {
+    background-color: #ffa757;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: 600;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 150px;
+    align-self: center;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #ff8a2d;
+}
+
+/* =============== RESPONSIVE =============== */
+@media (max-width: 900px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding: 0 20px;
+    }
+
+    .contact-form button {
+        width: 100%;
+    }
+
+    .contact-info h2 {
+        text-align: center;
+    }
+
+    .contact-info p {
+        text-align: center;
+    }
+}
