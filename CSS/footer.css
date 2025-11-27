@@ -1,0 +1,133 @@
+footer {
+    background-color: #fff;
+    color: #ffa757;
+    padding: 60px 100px;
+}
+
+.footer-container {
+    position: relative;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* --- Bagian Atas --- */
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 25px;
+    border-top: 2px solid #ffa757;
+    padding: 25px 0;
+}
+
+.footer-location {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-img {
+    width: 180px;
+    height: 190px;
+    border: 2px solid #ffa757;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.footer-location-maps iframe {
+    width: 300px;
+    height: 190px;
+    border: 2px solid #ffa757;
+}
+
+.footer-info {
+    flex: 1;
+    text-align: right;
+    padding-top: 10px;
+}
+
+.footer-info h3 {
+    color: #ffa757;
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+
+.footer-info p {
+    color: #804000;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* --- Bagian Tengah --- */
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    padding: 20px 0;
+    position: relative;
+    border-top: 10px double #ffa757;
+    border-bottom: 10px double #ffa757;
+}
+
+.footer-links h4 {
+    color: #ffa757;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    color: #804000;
+    margin-bottom: 6px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #804000;
+    transition: 0.3s;
+}
+
+/* --- Bagian Bawah --- */
+.footer-bottom {
+    text-align: center;
+    padding-top: 40px;
+}
+
+.footer-brand {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.footer-brand .brand {
+    font-size: 150px;
+    font-weight: 700;
+    color: #ffe6cc;
+    letter-spacing: 2px;
+    line-height: 1;
+}
+
+.logo-asaame {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 80px;
+    width: auto;
+}
+
+.footer-bottom p {
+    color: #804000;
+    margin: 6px 0;
+    font-size: 15px;
+}
+
+footer .copyright {
+    font-size: 14px;
+    color: #804000;
+    margin-top: 10px;
+}

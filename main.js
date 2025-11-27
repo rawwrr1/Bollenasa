@@ -1,47 +1,23 @@
-// === LOAD NAVBAR ===
-function loadNavbar() {
-  fetch("navbar.html")
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById("navbar-placeholder").innerHTML = data;
-
-      // Tambahkan CSS navbar
-      const navbarCSS = document.createElement("link");
-      navbarCSS.rel = "stylesheet";
-      navbarCSS.href = "navbar.css";
-      document.head.appendChild(navbarCSS);
+document.addEventListener("DOMContentLoaded", function() {
+  // Muat header
+  fetch("/HTML/header.html")
+    .then(response => {
+      if (!response.ok) throw new Error("Gagal memuat header");
+      return response.text();
     })
-    .catch(err => console.error("Gagal memuat navbar:", err));
-}
-
-// === LOAD HERO SECTION ===
-function loadHero() {
-  fetch("hero.html")
-    .then(res => res.text())
     .then(data => {
-      document.getElementById("hero-placeholder").innerHTML = data;
-
-      // Tambahkan CSS hero
-      const heroCSS = document.createElement("link");
-      heroCSS.rel = "stylesheet";
-      heroCSS.href = "hero.css";
-      document.head.appendChild(heroCSS);
-
-      // Tambahkan interaksi tombol Order Now
-      const btnOrder = document.querySelector(".btn-order");
-      if (btnOrder) {
-        btnOrder.addEventListener("click", () => {
-          // Arahkan ke halaman order (bisa disesuaikan)
-          window.location.href = "order.html";
-        });
-      }
+      document.getElementById("header").innerHTML = data;
     })
-    .catch(err => console.error("Gagal memuat hero section:", err));
-}
+    .catch(err => console.error("Error memuat header:", err));
 
-// === FUNGSI UTAMA ===
-document.addEventListener("DOMContentLoaded", () => {
-  // Load semua komponen
-  if (document.getElementById("navbar-placeholder")) loadNavbar();
-  if (document.getElementById("hero-placeholder")) loadHero();
+  // Muat footer
+  fetch("/HTML/footer.html")
+    .then(response => {
+      if (!response.ok) throw new Error("Gagal memuat footer");
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    })
+    .catch(err => console.error("Error memuat footer:", err));
 });
