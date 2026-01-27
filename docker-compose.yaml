@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  bollenasa-web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: bollenasa-web
+    restart: unless-stopped
+    environment:
+      # Konfigurasi untuk Global Reverse Proxy (Nginx Proxy Manager / Traefik / dll)
+      - VIRTUAL_HOST=bollenasa.arusdigital.cloud
+      - LETSENCRYPT_HOST=bollenasa.arusdigital.cloud
+      - LETSENCRYPT_EMAIL=admin@arusdigital.cloud
+    expose:
+      - "80" # Hanya expose port 80 ke network internal docker, tidak ke host
+    networks:
+      - proxy_default
+
+# Network external yang sudah ada di VPS (sesuai contoh user)
+networks:
+  proxy_default:
+    external: true
