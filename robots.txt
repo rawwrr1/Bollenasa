@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /CSS/
+Disallow: /main.js
+
+Sitemap: https://bollenasa.arusdigital.cloud/sitemap.xml
